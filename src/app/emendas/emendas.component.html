@@ -1,0 +1,129 @@
+<h2 class="text-3xl font-medium text-gray-800">Emendas</h2>
+<p class="mt-2 text-sm text-gray-500">Rota onde vai ficar a tabela de emendas.</p>
+
+<table>
+		<tr>
+			<th>Data Indicacão</th>
+			<th class="col-data-header">Area Emenda</th>
+			<th class="col-data-header">Tipo</th>
+			<th class="col-data-header">Sub-Tipo</th>
+			<th class="col-data-header">Estado</th>
+			<th class="col-valor-header">Cidade</th>
+			<th class="col-data-header">Emenda Orgão Gestor</th>
+			<th class="col-valor-header">Identificação Interna</th>
+			<th class="col-valor-header">CNES</th>
+			<th class="col-valor-header">N° Oficio</th>
+			<th class="col-valor-header">N° Proposta</th>
+			<th class="col-valor-header">N° Emenda</th>
+			<th class="col-valor-header">SINCOV</th>
+			<th class="col-valor-header">Valor indicado</th>
+			<th class="col-valor-header">Valor empenhado</th>
+			<th class="col-valor-header">Valor total pago</th>
+			<th class="col-valor-header">Restos a pagar</th>
+			<th>Data último pagamento</th>
+			<th class="col-acoes"></th>
+		</tr>
+	<ng-template pTemplate="body" let-eleitor>
+		<tr>
+			<td>
+				<span class="p-column-title">Data Indicação</span>
+			</td>
+			<td>
+				<span class="p-column-title">Area Emenda</span>
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Tipo</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Sub-Tipo</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Estado</span>
+				{{ eleitor.estadoCidade.estado.nome }}
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Cidade</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Emenda Orgão Gestor</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Identificação Interna</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">CNES</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">N° Oficio</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">N° Proposta</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">N° Emenda</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">SINCOV</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Valor indicado</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Valor empenhado</span>
+
+			</td>
+			
+			<td class="col-data">
+				<span class="p-column-title">Valor total pago</span>
+
+			</td>
+			
+			<!-- O campo abaixo, terá uma lógica no frontend -->
+			<td class="col-data">
+				<span class="p-column-title">Restos a pagar</span>
+				R$100,00
+				<!--{{ eleitor.valorPago | currency:'BRL':'symbol':'1.2-2' }} -->
+			</td>
+			
+			<td>
+				<span class="p-column-title">Data último pagamento</span>
+
+			</td>
+			
+			<td class="col-acoes">
+
+			</td>
+		</tr>
+	</ng-template>
+	<ng-template pTemplate="emptymessage">
+		<tr>
+			<td colspan="6">
+				Nenhum eleitor encontrado
+			</td>
+		</tr>
+	</ng-template>
+</table>

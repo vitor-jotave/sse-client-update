@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 import { ButtonModule } from 'primeng/button';
 import { ColorPickerModule } from 'primeng/colorpicker';
@@ -7,6 +8,7 @@ import { ColorPickerModule } from 'primeng/colorpicker';
     selector: 'dashboard-main',
     standalone: true,
     imports: [
+        RouterOutlet,
         ButtonModule,
         ColorPickerModule
     ],
